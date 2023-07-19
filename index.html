@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title> <link rel="stylesheet" href="style.css">
+    <script>
+       window.onload = function() {
+    let c = document.getElementById("Celsius");
+let f = document.getElementById("Farh");
+let k = document.getElementById("KM");
+   let m = document.getElementById("Mile");
+ c.oninput = function() {
+       
+ f.value = (c.value * 9/5) + 32
+    };
+  f.oninput = function() {
+ c.value = (f.value - 32) * 5/9;
+    };
+    k.oninput = function() {
+      m.value = (k.value / 1.609); 
+   };
+   m.oninput = function() {
+      k.value = (m.value * 1.609);
+   };
+};
+
+    </script>
+
+    
+</head>
+<body>
+  <header> <h1>Conveters</h1></header>
+
+ <form>
+    <label for="Celsius">Celsius</label><br>
+    <input type="number" id="Celsius" value="0">
+    <br><br>
+    <label for="Fahr">Fahrenheit</label><br>
+    <input type="number" id="Farh" value="32">
+    <br><br>
+   </form>
+   <form>
+    <label for="KM">Kilometer</label><br>
+    <input type="number" id="KM" value="1">
+    <br><br>
+    <label for="Mile">Mile</label><br>
+    <input type="number" id="Mile" value="0.621">
+   </form>
+</body>
+</html>
